@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "891015447207",
+    "project_id": "authservice-4c02f",
+    "storage_bucket": "authservice-4c02f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:891015447207:android:48b41ab6575efd73eed182",
+        "android_client_info": {
+          "package_name": "com.example.seafriend"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "891015447207-i2nfvm9mfdt0grf89i9l2us69bjn9aid.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.seafriend",
+            "certificate_hash": "2d8015e83c0e9a2bd5ce9c143d39e49dd0339ac1"
+          }
+        },
+        {
+          "client_id": "891015447207-3lujpvr458ijrth58edtsgg8406fl3pm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1TVqvttsYaJR61W8KY-1mYeUPjgh05nU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "891015447207-3lujpvr458ijrth58edtsgg8406fl3pm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
