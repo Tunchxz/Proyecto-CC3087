@@ -14,6 +14,7 @@ android {
     defaultConfig {
         applicationId = "com.example.seafriend"
         minSdk = 24
+        //noinspection OldTargetApi
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -60,6 +61,16 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    // Firebase
-    implementation(platform("com.google.firebase:firebase-bom:33.4.0"))
+    //------------------- Firebase -------------------
+    // BoM for the Firebase platform
+    implementation(platform(libs.firebase.bom))
+    // Dependency for the Firebase Authentication library
+    implementation(libs.firebase.auth.ktx)
+
+    //------------------- Google Play -------------------
+    // Dependency for the Google Play services library and specify its version
+    implementation(libs.play.services.auth)
+
+    //------------------- Navigation -------------------
+    implementation(libs.androidx.navigation.compose)
 }
