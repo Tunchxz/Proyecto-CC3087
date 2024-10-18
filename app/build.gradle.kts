@@ -5,6 +5,9 @@ plugins {
 
     // Google services Gradle plugin
     id("com.google.gms.google-services")
+    // Hilt
+    id("kotlin-kapt")
+    id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -53,6 +56,8 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+
+    //-------------------- JUnit Test -------------------
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -61,16 +66,26 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    //------------------- Firebase -------------------
-    // BoM for the Firebase platform
+    //-------------------- Firebase -------------------
     implementation(platform(libs.firebase.bom))
-    // Dependency for the Firebase Authentication library
-    implementation(libs.firebase.auth.ktx)
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-firestore")
 
-    //------------------- Google Play -------------------
-    // Dependency for the Google Play services library and specify its version
+    //-------------------- Credential Manager -------------------
     implementation(libs.play.services.auth)
+    implementation("androidx.credentials:credentials:1.3.0")
+    implementation("androidx.credentials:credentials-play-services-auth:1.3.0")
+    implementation("com.google.android.libraries.identity.googleid:googleid:1.1.1")
 
     //------------------- Navigation -------------------
     implementation(libs.androidx.navigation.compose)
+
+    //------------------- Hilt -------------------
+    implementation("com.google.dagger:hilt-android:2.44")
+    kapt("com.google.dagger:hilt-android-compiler:2.44")
+}
+
+// Allow references to generated code
+kapt {
+    correctErrorTypes = true
 }
